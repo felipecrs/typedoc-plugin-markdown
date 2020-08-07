@@ -29,22 +29,22 @@ export class ContextAwareHelpersComponent extends ContextAwareRendererComponent 
   /**
    * The pattern used to find references in markdown.
    */
-  private includePattern: RegExp = /\[\[include:([^\]]+?)\]\]/g;
+  private includePattern = /\[\[include:([^\]]+?)\]\]/g;
 
   /**
    * The pattern used to find media links.
    */
-  private mediaPattern: RegExp = /media:\/\/([^ "\)\]\}]+)/g;
+  private mediaPattern = /media:\/\/([^ "\)\]\}]+)/g;
 
   /**
    * Regular expression for detecting bracket links.
    */
-  private brackets: RegExp = /\[\[([^\]]+)\]\]/g;
+  private brackets = /\[\[([^\]]+)\]\]/g;
 
   /**
    * Regular expression for detecting inline tags like {@link ...}.
    */
-  private inlineTag: RegExp = /(?:\[(.+?)\])?\{@(link|linkcode|linkplain)\s+((?:.|\n)+?)\}/gi;
+  private inlineTag = /(?:\[(.+?)\])?\{@(link|linkcode|linkplain)\s+((?:.|\n)+?)\}/gi;
 
   private listInvalidSymbolLinks: boolean;
 
@@ -69,6 +69,7 @@ export class ContextAwareHelpersComponent extends ContextAwareRendererComponent 
       100,
     );
 
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const component = this;
 
     MarkdownTheme.handlebars.registerHelper('comment', function (this: string) {
@@ -94,7 +95,7 @@ export class ContextAwareHelpersComponent extends ContextAwareRendererComponent 
         md.push(model.url);
       }
     } else {
-      if (!!project.readme) {
+      if (project.readme) {
         md.push(`[${project.name}](${MarkdownTheme.handlebars.helpers.relativeURL(theme.indexName + theme.fileExt)})`);
       }
       md.push(
@@ -220,7 +221,7 @@ export class ContextAwareHelpersComponent extends ContextAwareRendererComponent 
   /**
    * Triggered when [[Renderer]] is finished
    */
-  onEndRenderer(event: RendererEvent) {
+  onEndRenderer() {
     if (this.listInvalidSymbolLinks && this.warnings.length > 0) {
       this.application.logger.write('');
       this.application.logger.warn(

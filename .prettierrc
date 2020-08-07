@@ -1,0 +1,6 @@
+{
+  "disableLanguages": ["hbs", "handlebars"],
+  "printWidth": 120,
+  "singleQuote": true,
+  "trailingComma": "all"
+}

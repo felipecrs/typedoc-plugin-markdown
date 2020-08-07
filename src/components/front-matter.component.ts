@@ -1,4 +1,5 @@
 import * as path from 'path';
+
 import { NavigationItem } from 'typedoc';
 import { Component, ContextAwareRendererComponent } from 'typedoc/dist/lib/output/components';
 import { PageEvent } from 'typedoc/dist/lib/output/events';
@@ -42,6 +43,7 @@ sidebar_label: "${this.escapeYAMLString(this.getLabel(page))}"
       return 'Globals';
     }
     const title = this.getTitleFromNavigation(page, page.url);
+    // eslint-disable-next-line no-extra-boolean-cast
     return title ? title : !!page.project.readme ? 'README' : 'Globals';
   }
 
@@ -60,7 +62,7 @@ sidebar_label: "${this.escapeYAMLString(this.getLabel(page))}"
   }
 
   findNavigationItem(navigation: NavigationItem[], url, item: NavigationItem) {
-    navigation.forEach(navigationChild => {
+    navigation.forEach((navigationChild) => {
       if (navigationChild.url === url) {
         item = navigationChild;
         return;
