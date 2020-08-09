@@ -6,6 +6,7 @@
 /out
 /test/fixtures
 .nyc_output/
+html
 
 
 # dependencies
