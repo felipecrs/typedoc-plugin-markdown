@@ -1,0 +1,8 @@
+{
+  "inputFiles": "./examples/",
+  "target": "ES5",
+  "readme": "none",
+  "tsconfig": "./examples/tsconfig.json",
+  "includes": "./test/stubs/inc/",
+  "media": "./test/stubs/media/"
+}
