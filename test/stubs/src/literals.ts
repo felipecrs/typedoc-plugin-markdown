@@ -1,6 +1,6 @@
 const objectLiteral = {
   valueZ: 'foo',
-  valueY: function() {
+  valueY: function () {
     return 'foo';
   },
   valueX: {

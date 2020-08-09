@@ -6,7 +6,7 @@
  * - Link to an undefined reflection: [[VOID]]
  */
 
-export let commentsWithSymbolLinks = true;
+export const commentsWithSymbolLinks = true;
 
 /**
  * This is an example of include
@@ -17,7 +17,7 @@ export let commentsWithSymbolLinks = true;
  *
  * [[include:class-example.hbs]]
  */
-export let commentsWithIncludes = true;
+export const commentsWithIncludes = true;
 
 /**
  * @name Tag description on same line
@@ -28,7 +28,7 @@ export let commentsWithIncludes = true;
  * @deprecated
  * Another tag description
  */
-export let commentsWithTags = true;
+export const commentsWithTags = true;
 
 /**
  * Some comments with fence blocks
@@ -39,7 +39,7 @@ export let commentsWithTags = true;
  * anotherFunction()
  * ```
  */
-export let commentsWithFencedBlock = true;
+export const commentsWithFencedBlock = true;
 
 /**
  * Comments with a return definition

@@ -33,7 +33,7 @@ export function exportedFunction(): void {}
  *
  * @returns This is the return value of the function.
  */
-export function functionWithParameters(paramZ: string, paramG: any, paramA: Object): number {
+export function functionWithParameters(paramZ: string, paramG: any, paramA: any): number {
   return 0;
 }
 
@@ -66,10 +66,10 @@ export function functionWithOptionalValue(requiredParam: string, optionalParam?:
  * @return This is the return value of the function.
  */
 export function functionWithDefaults(
-  valueA: string = 'defaultValue',
-  valueB: number = 100,
+  valueA = 'defaultValue',
+  valueB = 100,
   valueC: number = Number.NaN,
-  valueD: boolean = true,
+  valueD = true,
   valueE: boolean = null,
 ): string {
   return valueA;
@@ -83,70 +83,4 @@ export function functionWithDefaults(
  */
 export function functionWithRest(...rest: string[]): string {
   return rest.join(', ');
-}
-
-/**
- * This is the first signature of a function with multiple signatures.
- *
- * @param value  The name value.
- */
-export function multipleSignatures(value: string): string;
-
-/**
- * This is the second signature of a function with multiple signatures.
- *
- * @param value       An object containing the name value.
- * @param value.name  A value of the object.
- */
-export function multipleSignatures(value: { name: string }): string;
-
-/**
- * This is the actual implementation, this comment will not be visible
- * in the generated documentation.
- *
- * @return This is the return value of the function.
- */
-export function multipleSignatures(): string {
-  if (arguments.length > 0) {
-    if (typeof arguments[0] == 'object') {
-      return arguments[0].name;
-    } else {
-      return arguments[0];
-    }
-  }
-
-  return '';
-}
-
-/**
- * This is a function that is extended by a module.
- *
- * @param arg An argument.
- */
-export function moduleFunction(arg: string): string {
-  return '';
-}
-
-export function restUntionTypes(arg: boolean[] | number, ...args: (string | number)[]): any {
-  return null;
-}
-
-/**
- * This is the module extending the function moduleFunction().
- */
-export namespace moduleFunction {
-  /**
-   * This variable is appended to a function.
-   */
-  export let functionVariable: string;
-
-  /**
-   * This function is appended to another function.
-   */
-  export function append() {}
-
-  /**
-   * This function is appended to another function.
-   */
-  export function prepend() {}
 }
