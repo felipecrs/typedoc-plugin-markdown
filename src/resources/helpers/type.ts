@@ -1,3 +1,4 @@
+import { DeclarationReflection, SignatureReflection } from 'typedoc';
 import {
   ArrayType,
   IntersectionType,
@@ -51,11 +52,23 @@ export function type(
     return getStringLiteralType(this);
   }
 
-  if (this instanceof TypeOperatorType || this instanceof ReflectionType) {
-    return this;
+  if (this instanceof ReflectionType && this.declaration.children) {
+    return getLiteralType(this.declaration.children);
   }
 
-  return this.toString().replace(/</g, '‹').replace(/>/g, '›');
+  if (this instanceof DeclarationReflection && this.children) {
+    return getLiteralType(this.children);
+  }
+
+  if (this instanceof ReflectionType && this.declaration.signatures) {
+    return getFunctionType(this.declaration.signatures);
+  }
+
+  if (this instanceof DeclarationReflection && this.signatures) {
+    return getFunctionType(this.signatures);
+  }
+
+  return this ? this.toString().replace(/</g, '‹').replace(/>/g, '›') : '';
 }
 
 function getReferenceType(model: ReferenceType) {
@@ -92,4 +105,24 @@ function getIntrinsicType(model: IntrinsicType) {
 
 function getStringLiteralType(model: StringLiteralType) {
   return `\"${model.value}\"`;
+}
+
+function getLiteralType(children: DeclarationReflection[]) {
+  const types = children.map((obj) => {
+    return `${obj.name}: ${type.call(obj.signatures || obj.children ? obj : obj.type)}`;
+  });
+  return `{ ${types.join('; ')} }`;
+}
+
+function getFunctionType(signatures: SignatureReflection[]) {
+  const functions = signatures.map((fn) => {
+    const params = fn.parameters
+      ? fn.parameters.map((param) => {
+          return `${param.name}: ${type.call(param.type ? param.type : param)}`;
+        })
+      : [];
+    const returns = type.call(fn.type);
+    return `(${params.join(',')}) => ${returns}`;
+  });
+  return functions;
 }
