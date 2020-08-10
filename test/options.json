@@ -1,7 +1,8 @@
 {
-  "inputFiles": "./test/stubs/src",
+  "inputFiles": "./test/stubs/",
   "target": "ES5",
   "readme": "none",
   "includes": "./test/stubs/inc/",
-  "media": "./test/stubs/media/"
+  "media": "./test/stubs/media/",
+  "tsconfig": "./test/stubs/tsconfig.json"
 }
