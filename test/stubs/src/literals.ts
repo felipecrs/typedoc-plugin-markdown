@@ -12,9 +12,17 @@ const objectLiteral = {
   },
   valueA: 100,
   valueB: true,
+  /**
+   * Comment for valueN
+   */ valueN: function (n: number) {
+    return 2;
+  },
 };
 
 let typeLiteral: {
+  /**
+   * Comment for valueZ
+   */
   valueZ: string;
   valueY: { (): string };
   valueX: {

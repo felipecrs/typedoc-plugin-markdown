@@ -30,7 +30,7 @@
 
 \+ **new Animal**(`theName`: string): *[Animal](classes.animal.md)*
 
-Defined in classes/inheritence.ts:2
+*Defined in [classes/inheritence.ts:2](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/classes/inheritence.ts#L2)*
 
 **Parameters:**
 
@@ -46,7 +46,7 @@ Name | Type |
 
 • **name**: *string*
 
-Defined in classes/inheritence.ts:2
+*Defined in [classes/inheritence.ts:2](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/classes/inheritence.ts#L2)*
 
 ## Methods
 
@@ -54,7 +54,7 @@ Defined in classes/inheritence.ts:2
 
 ▸ **move**(`distanceInMeters`: number): *void*
 
-Defined in classes/inheritence.ts:6
+*Defined in [classes/inheritence.ts:6](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/classes/inheritence.ts#L6)*
 
 **Parameters:**
 

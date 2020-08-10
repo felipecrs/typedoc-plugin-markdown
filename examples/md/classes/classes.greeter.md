@@ -26,7 +26,7 @@
 
 \+ **new Greeter**(`message`: string): *[Greeter](classes.greeter.md)*
 
-Defined in classes/simple.ts:2
+*Defined in [classes/simple.ts:2](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/classes/simple.ts#L2)*
 
 **Parameters:**
 
@@ -42,7 +42,7 @@ Name | Type |
 
 • **greeting**: *string*
 
-Defined in classes/simple.ts:2
+*Defined in [classes/simple.ts:2](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/classes/simple.ts#L2)*
 
 ## Methods
 
@@ -50,6 +50,6 @@ Defined in classes/simple.ts:2
 
 ▸ **greet**(): *string*
 
-Defined in classes/simple.ts:8
+*Defined in [classes/simple.ts:8](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/classes/simple.ts#L8)*
 
 **Returns:** *string*

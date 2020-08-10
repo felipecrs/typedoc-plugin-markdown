@@ -26,7 +26,7 @@
 
 • **currentTime**: *Date*
 
-Defined in interfaces/class-types.ts:2
+*Defined in [interfaces/class-types.ts:2](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/interfaces/class-types.ts#L2)*
 
 ## Methods
 
@@ -34,7 +34,7 @@ Defined in interfaces/class-types.ts:2
 
 ▸ **setTime**(`d`: Date): *void*
 
-Defined in interfaces/class-types.ts:3
+*Defined in [interfaces/class-types.ts:3](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/interfaces/class-types.ts#L3)*
 
 **Parameters:**
 

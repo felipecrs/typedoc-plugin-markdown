@@ -30,7 +30,7 @@
 
 \+ **new Clock**(`h`: number, `m`: number): *[Clock](interfaces.clock.md)*
 
-Defined in interfaces/class-types.ts:10
+*Defined in [interfaces/class-types.ts:10](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/interfaces/class-types.ts#L10)*
 
 **Parameters:**
 
@@ -49,7 +49,7 @@ Name | Type |
 
 *Implementation of [ClockInterface](../interfaces/interfaces.clockinterface.md).[currentTime](../interfaces/interfaces.clockinterface.md#currenttime)*
 
-Defined in interfaces/class-types.ts:7
+*Defined in [interfaces/class-types.ts:7](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/interfaces/class-types.ts#L7)*
 
 ## Methods
 
@@ -59,7 +59,7 @@ Defined in interfaces/class-types.ts:7
 
 *Implementation of [ClockInterface](../interfaces/interfaces.clockinterface.md)*
 
-Defined in interfaces/class-types.ts:8
+*Defined in [interfaces/class-types.ts:8](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/interfaces/class-types.ts#L8)*
 
 **Parameters:**
 

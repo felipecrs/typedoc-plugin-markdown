@@ -30,7 +30,7 @@
 
 *Overrides [Animal](classes.animal.md).[constructor](classes.animal.md#constructor)*
 
-Defined in classes/inheritence.ts:11
+*Defined in [classes/inheritence.ts:11](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/classes/inheritence.ts#L11)*
 
 **Parameters:**
 
@@ -48,7 +48,7 @@ Name | Type |
 
 *Inherited from [Animal](classes.animal.md).[name](classes.animal.md#name)*
 
-Defined in classes/inheritence.ts:2
+*Defined in [classes/inheritence.ts:2](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/classes/inheritence.ts#L2)*
 
 ## Methods
 
@@ -58,7 +58,7 @@ Defined in classes/inheritence.ts:2
 
 *Overrides [Animal](classes.animal.md).[move](classes.animal.md#move)*
 
-Defined in classes/inheritence.ts:15
+*Defined in [classes/inheritence.ts:15](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/classes/inheritence.ts#L15)*
 
 **Parameters:**
 

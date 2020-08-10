@@ -22,7 +22,7 @@
 
 • **sam**: *[Snake](../classes/classes.snake.md)‹›* = new Snake('Sammy the Python')
 
-Defined in classes/inheritence.ts:31
+*Defined in [classes/inheritence.ts:31](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/classes/inheritence.ts#L31)*
 
 ___
 
@@ -30,4 +30,4 @@ ___
 
 • **tom**: *[Animal](../classes/classes.animal.md)* = new Horse('Tommy the Palomino')
 
-Defined in classes/inheritence.ts:32
+*Defined in [classes/inheritence.ts:32](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/classes/inheritence.ts#L32)*

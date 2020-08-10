@@ -29,7 +29,7 @@
 
 • **mySquare**: *object* = createSquare({ color: 'black' })
 
-Defined in interfaces/optional-properties.ts:17
+*Defined in [interfaces/optional-properties.ts:17](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/interfaces/optional-properties.ts#L17)*
 
 #### Type declaration:
 
@@ -43,7 +43,7 @@ Defined in interfaces/optional-properties.ts:17
 
 ▸ **createSquare**(`config`: [SquareConfig](../interfaces/interfaces.squareconfig.md)): *object*
 
-Defined in interfaces/optional-properties.ts:6
+*Defined in [interfaces/optional-properties.ts:6](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/interfaces/optional-properties.ts#L6)*
 
 **Parameters:**
 
@@ -63,7 +63,7 @@ ___
 
 ▸ **printLabel**(`labeledObj`: [LabeledValue](../interfaces/interfaces.labeledvalue.md)): *void*
 
-Defined in interfaces/simple.ts:5
+*Defined in [interfaces/simple.ts:5](https://github.com/tgreyuk/typedoc-plugin-markdown/blob/cb4f845/examples/src/interfaces/simple.ts#L5)*
 
 **Parameters:**
 
