@@ -16,7 +16,15 @@
 
 {{#ifIsLiteralType true}}
 
-{{{literal}}}
+{{#if children}}
+
+{{#with children}}
+
+{{{propertyTable}}}
+
+{{/with}}
+
+{{/if}}
 
 {{/ifIsLiteralType}}
 

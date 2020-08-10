@@ -24,6 +24,20 @@ ___
 
 {{heading 2}} {{title}}
 
+{{#ifIsInterface true}}
+
+{{#if children}}
+
+{{#with children}}
+
+{{{propertyTable}}}
+
+{{/with}}
+
+{{/if}}
+
+{{else}}
+
 {{#each children}}
 
 {{#unless hasOwnDocument}}
@@ -33,5 +47,7 @@ ___
 {{/unless}}
 
 {{/each}}
+
+{{/ifIsInterface}}
 
 {{/if}}

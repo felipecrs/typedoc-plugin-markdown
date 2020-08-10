@@ -12,9 +12,7 @@
 
 {{/each}}
 
-{{else}}
-
-{{#if hasGetterOrSetter}}
+{{else if hasGetterOrSetter}}
 
 {{> member.getterSetter}}
 
@@ -24,7 +22,19 @@
 
 {{/if}}
 
+{{#ifIsObjectLiteralType true}}
+
+{{#if children}}
+
+{{#with children}}
+
+{{{propertyTable}}}
+
+{{/with}}
+
 {{/if}}
+
+{{else}}
 
 {{#each groups}}
 
@@ -34,9 +44,19 @@
 
 {{#ifIsLiteralType true}}
 
+{{#if children}}
+
+{{#with children}}
+
+{{{propertyTable}}}
+
+{{/with}}
+
+{{else}}
+
 {{> member.declaration}}
 
-{{{literal}}}
+{{/if}}
 
 {{/ifIsLiteralType}}
 
@@ -51,6 +71,8 @@
 {{/each}}
 
 {{/each}}
+
+{{/ifIsObjectLiteralType}}
 
 {{#unless @last}}
 {{#unless hideHr}}
