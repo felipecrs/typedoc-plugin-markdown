@@ -13,5 +13,6 @@
     "strictNullChecks": false,
     "target": "es2015"
   },
+  "include": ["src/**/*"],
   "exclude": ["./dist", "./test", "**/*.spec.ts"]
 }
