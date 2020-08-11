@@ -5,6 +5,7 @@
 /tmp
 /out
 /test/fixtures
+/test/snapshots
 .nyc_output/
 html
 
