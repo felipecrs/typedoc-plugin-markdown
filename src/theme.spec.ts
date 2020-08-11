@@ -1,15 +1,18 @@
-import * as fs from 'fs-extra';
 import * as path from 'path';
+
+import * as fs from 'fs-extra';
 import { Application, UrlMapping } from 'typedoc';
 
 describe(`MarkdownTheme`, () => {
   function getExpectedUrls(urlMappings: UrlMapping[]) {
     const expectedUrls = [];
-    urlMappings.forEach(urlMapping => {
+    urlMappings.forEach((urlMapping) => {
       expectedUrls.push(urlMapping.url);
-      urlMapping.model.children.forEach(reflection => {
-        expectedUrls.push(reflection.url);
-      });
+      if (urlMapping.model.children) {
+        urlMapping.model.children.forEach((reflection) => {
+          expectedUrls.push(reflection.url);
+        });
+      }
     });
     return expectedUrls;
   }
@@ -48,10 +51,6 @@ describe(`MarkdownTheme`, () => {
       const urlMappings = theme.getUrls(project);
       expect(getExpectedUrls(urlMappings)).toMatchSnapshot();
       spy.mockRestore();
-    });
-
-    test(`should get navigation`, () => {
-      expect(theme.getNavigation(project)).toMatchSnapshot();
     });
   });
 

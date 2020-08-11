@@ -1,6 +1,7 @@
+import * as path from 'path';
+
 import * as fs from 'fs-extra';
 import * as Handlebars from 'handlebars';
-import * as path from 'path';
 import { Application } from 'typedoc';
 
 const handlebarsHelpersOptionsStub = {
@@ -47,7 +48,7 @@ describe(`Helpers`, () => {
   });
 
   describe(`declarationTitle helper`, () => {
-    test(`should compi;e`, () => {
+    test(`should compile`, () => {
       expect(Handlebars.helpers.declarationTitle.call(project.findReflectionByName('color'))).toMatchSnapshot();
     });
   });
@@ -100,46 +101,6 @@ describe(`Helpers`, () => {
       const data = project.findReflectionByName('color');
       const result = Handlebars.helpers.ifIsLiteralType.call(data, false, handlebarsHelpersOptionsStub);
       expect(result).toEqual('true');
-    });
-  });
-
-  describe(`ifParentIsObjectLiteral helper`, () => {
-    test(`should return true if ifParentIsObjectLiteral is is true and expectation is truthy`, () => {
-      const data = {
-        parent: {
-          parent: {
-            kind: 2097152,
-          },
-        },
-      };
-      const result = Handlebars.helpers.ifParentIsObjectLiteral.call(data, true, handlebarsHelpersOptionsStub);
-      expect(result).toEqual('true');
-    });
-
-    test(`should return false if ifParentIsObjectLiteral is is false and expectation is truthy`, () => {
-      const data = {};
-      const result = Handlebars.helpers.ifParentIsObjectLiteral.call(data, true, handlebarsHelpersOptionsStub);
-      expect(result).toEqual('false');
-    });
-
-    test(`should return true if ifParentIsObjectLiteral is is false and expectation is falsey`, () => {
-      const data = {};
-      const result = Handlebars.helpers.ifParentIsObjectLiteral.call(data, false, handlebarsHelpersOptionsStub);
-      expect(result).toEqual('true');
-    });
-  });
-
-  describe(`literal helper`, () => {
-    test(`should compile object literal`, () => {
-      const data = project.findReflectionByName('objectLiteral');
-      const result = Handlebars.helpers.literal.call(data);
-      expect(result).toMatchSnapshot();
-    });
-
-    test(`should compile type literal`, () => {
-      const data = project.findReflectionByName('typeLiteral');
-      const result = Handlebars.helpers.literal.call(data);
-      expect(result).toMatchSnapshot();
     });
   });
 
