@@ -1,29 +1,14 @@
-import * as path from 'path';
-import { Application } from 'typedoc';
+import { setup } from '../../test/utils';
 
 const { FrontMatterComponent } = require('components/front-matter.component');
 describe(`FrontMatterComponent`, () => {
-  let frontMatterComponent;
-  let app;
+  let app: any;
+  let frontMatterComponent: any;
 
   beforeAll(() => {
-    app = new Application();
-    app.bootstrap({
-      mode: 'file',
-      module: 'CommonJS',
-      target: 'ES5',
-      readme: 'none',
-      theme: 'markdown',
-      logger: 'none',
-      plugin: path.join(__dirname, '../../../dist/index'),
-    });
-    app.convert(['./test/stubs/functions.ts']);
+    ({ app } = setup());
     app.renderer.addComponent('frontmatter', new FrontMatterComponent(app.renderer));
     frontMatterComponent = app.renderer.getComponent('frontmatter');
-  });
-
-  test(`should prepend YAML block to start of page`, () => {
-    expect(true).toBeTruthy();
   });
 
   test(`should prepend YAML block to start of page`, () => {

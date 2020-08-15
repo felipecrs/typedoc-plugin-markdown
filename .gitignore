@@ -2,7 +2,7 @@
 
 # compiled output
 /dist
-/tmp
+tmp
 /out
 /test/fixtures
 /test/snapshots

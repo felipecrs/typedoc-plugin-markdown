@@ -4,7 +4,7 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest',
   },
   verbose: true,
-  collectCoverage: true,
+  collectCoverage: false,
   coverageReporters: ['lcov', 'text', 'text-summary'],
   collectCoverageFrom: ['<rootDir>/dist/**/*js'],
 };

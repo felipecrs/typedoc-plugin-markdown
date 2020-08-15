@@ -1,9 +1,9 @@
-import * as path from 'path';
-
 import * as fs from 'fs-extra';
-import { Application, UrlMapping } from 'typedoc';
+import { UrlMapping } from 'typedoc';
 
-describe(`MarkdownTheme`, () => {
+import { setup } from '../test/utils';
+
+describe(`theme`, () => {
   function getExpectedUrls(urlMappings: UrlMapping[]) {
     const expectedUrls = [];
     urlMappings.forEach((urlMapping) => {
@@ -17,32 +17,17 @@ describe(`MarkdownTheme`, () => {
     return expectedUrls;
   }
 
-  let app;
-  let project;
-  let theme;
-  const out = path.join(__dirname, 'tmp');
+  let app: any;
+  let project: any;
+  let theme: any;
   beforeAll(() => {
-    app = new Application();
-    app.bootstrap({
-      module: 'CommonJS',
-      target: 'ES5',
-      readme: 'none',
-      theme: 'markdown',
-      logger: 'none',
-      plugin: path.join(__dirname, '../dist/index'),
-    });
-    project = app.convert(app.expandInputFiles(['./test/stubs/']));
-    app.generateDocs(project, out);
+    ({ app, project } = setup());
     theme = app.renderer.theme;
-  });
-
-  afterAll(() => {
-    fs.removeSync(out);
   });
 
   describe(`getUrls`, () => {
     test(`should getUrls'`, () => {
-      const urlMappings = theme.getUrls(project);
+      const urlMappings = app.renderer.theme.getUrls(project);
       expect(getExpectedUrls(urlMappings)).toMatchSnapshot();
     });
 
